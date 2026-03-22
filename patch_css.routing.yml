@@ -1,0 +1,9 @@
+
+
+patch_css.settings:
+  path: '/admin/config/custom/patch_css'
+  defaults:
+    _form: 'Drupal\patch_css\Form\patch_cssSettingsForm'
+    _title: 'Frontend CSS Editor settings'
+  requirements:
+    _permission: 'administer stylesheet'

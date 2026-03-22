@@ -1,0 +1,25 @@
+<?php
+
+use Drupal\Core\Render\Markup;
+
+/**
+ * Implements hook_page_attachments().
+ */
+function patch_css_page_attachments(array &$attachments) {
+
+  $css = \Drupal::config('patch_css.settings')->get('styles');
+
+  if (empty($css)) {
+    return;
+  }
+
+  $attachments['#attached']['html_head'][] = [
+    [
+      '#type' => 'html_tag',
+      '#tag' => 'style',
+      '#value' => Markup::create($css),
+    ],
+    'patch_css_custom_css',
+  ];
+
+}

@@ -1,0 +1,6 @@
+name: 'Frontend CSS Editor'
+type: module
+description: 'Frontend CSS Editor'
+core_version_requirement: ^9 || ^10 || ^11
+package: Custom
+configure: patch_css.settings
